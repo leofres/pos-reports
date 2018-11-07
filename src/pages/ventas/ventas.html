@@ -1,0 +1,34 @@
+<!--
+  Generated template for the VentasPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>ventas</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentRadioPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let ticket of tickets">
+        <ion-avatar item-start>
+            <img src="https://place-hold.it/150x150/666/fff/000.gif">
+        </ion-avatar>
+        <h2>Status: {{ticket.status}}</h2>
+        <h3>Subtotal: {{ticket.subtotal}}</h3>
+        <p>Total: {{ticket.total}}</p>
+    </ion-item>
+
+
+  </ion-list>
+</ion-content>
